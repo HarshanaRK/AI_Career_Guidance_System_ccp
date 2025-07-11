@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url("{{ url_for('static', filename='uploads/bg.jpg') }}") no-repeat center center/cover;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 50%;
+            min-width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container {
+            max-height: 400px; /* Adjust height as needed */
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+            display: block;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .form-group select:focus {
+            border-color: #007bff;
+        }
+        .submit-container {
+            position: sticky;
+            bottom: 0;
+            background: white;
+            padding-top: 10px;
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(90deg, #4A90E2, #883fc8);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 style="text-align: center;">Rate Your Skills</h2>
+        <div class="form-container">
+            <form method="post" action="{{ url_for('career_test') }}">
+                {% for skill in [
+                    'Database Fundamentals', 'Software Development', 'Computer Architecture',
+                    'Distributed Computing Systems', 'Cyber Security', 'Computer Networking',
+                    'Programming Skills', 'Project Management', 'Computer Forensics Fundamentals',
+                    'Technical Communication Skills', 'AI ML', 'Software Engineering',
+                    'Business Analysis', 'Communication Skills', 'Data Science',
+                    'Troubleshooting Skills', 'Graphics Designing'
+                ] %}
+                <div class="form-group">
+                    <label>{{ skill }}</label>
+                    <select name="rate_{{ skill|replace(' ', '_') }}" required>
+                        <option value="">Choose option</option>
+                        <option value="1">Not Interested</option>
+                        <option value="2">Poor</option>
+                        <option value="3">Beginner</option>
+                        <option value="5">Average</option>
+                        <option value="6">Intermediate</option>
+                        <option value="7">Excellent</option>
+                        <option value="9">Professional</option>
+                    </select>
+                </div>
+                {% endfor %}
+                <div class="submit-container">
+                    <button type="submit">Discover Yourself!!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

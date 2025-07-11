@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Career Prediction Result</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <style>
+        /* Style for the logout button */
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logout-btn:hover {
+            background-color: #cc0000;
+        }
+
+        /* Styling for career options */
+        .career-options {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .career-link {
+            display: block;
+            font-size: 20px;
+            color: #3F51B5;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        .career-link:hover {
+            color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="background-color: rgb(120, 70, 167); padding: 15px; text-align: center; color: white; position: relative;">
+        <h1>Career Prediction Result</h1>
+        
+        <!-- Logout button at top right -->
+        <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    </header>
+
+    <main style="text-align: center; margin-top: 50px;">
+        <h2>Hey! Based on your skills, you can be a great:</h2>
+        <h1 style="color: #673AB7;">
+            <a href="{{ career_links.get(job0, '#') }}" class="career-link" target="_blank">{{ job0 }}</a>
+        </h1>
+        
+        <h3>Other suitable career options for you:</h3>
+        <div class="career-options">
+            {% for key, value in final_res.items() %}
+                {% if job0 != job_dict[value] %}
+                    <a href="{{ career_links.get(job_dict[value], '#') }}" class="career-link" target="_blank">
+                        {{ job_dict[value] }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </main>
+    
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; background-color: rgb(120, 70, 167); color: white;">
+        <p>&copy; 2023 CareerQuest</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("uploads/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: white;
+}
+
+.left img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.right {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #6a11cb;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #6f47a4b1;
+}
+
+.small-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.small-text a {
+    color: #6a11cb;
+    text-decoration: none;
+}
+
+.small-text a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .left {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .right {
+        width: 100%;
+    }
+}
+.flash-message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.flash-message.success {
+    color: #ffffff;
+}
+
+.flash-message.error {
+    color: #721c24;
+}
+
+.flash-message.info {
+    background: #ffffff;
+    color: #0c5460;
+}
+
+/* Logout Button */
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background: #ff3366;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background: #ff0040;
+}
