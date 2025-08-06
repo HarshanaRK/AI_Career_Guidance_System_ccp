@@ -1,5 +1,5 @@
 
-# CCP2 – Career Compatibility Predictor
+# AI-POWERED CAREER GUIDENCE SYSTEM
 
 🎯 A machine learning-based web application that predicts career paths based on user inputs using a trained model.
 
