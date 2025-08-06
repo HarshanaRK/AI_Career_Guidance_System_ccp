@@ -26,7 +26,7 @@ CCP2 is a machine learning project that assists users in identifying suitable ca
 
 ## ✨ Features
 
-* Career prediction using pre-trained ML model
+* Career prediction using trained ML model
 * Interactive user input interface (via `app.py`)
 * Label encoding for categorical variables
 * Model training script (`train_model.py`)
@@ -39,7 +39,7 @@ CCP2 is a machine learning project that assists users in identifying suitable ca
 * **Programming Language**: Python 3
 * **Libraries**: `scikit-learn`, `pandas`, `pickle`
 * **Model Type**: Supervised classification
-* **Frontend (optional)**: Streamlit / Flask (based on `app.py` usage)
+* **Frontend**:  Flask 
 
 ---
 
@@ -48,26 +48,20 @@ CCP2 is a machine learning project that assists users in identifying suitable ca
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/ccp2.git  
-   cd ccp2
+   git clone https://github.com/HarshanaRK/AI_Career_Guidance_System_ccp.git
+   cd AI_Career_Guidance_System_ccp
    ```
 
 2. **Install dependencies**
-   Create a virtual environment and activate it:
-
-   ```bash
-   python -m venv venv  
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
 
    Install required packages:
 
-   ```bash
-   pip install -r requirements.txt
+   ```
+   pip install 
    ```
 
 3. **Set up environment variables**
-   Create a `.env` file and add any required keys or secrets (if used in the app).
+   Create a `.env` file and add any required keys or secrets
 
 ---
 
@@ -75,7 +69,7 @@ CCP2 is a machine learning project that assists users in identifying suitable ca
 
 To run the application:
 
-```bash
+```
 python app.py
 ```
 
@@ -90,7 +84,7 @@ If you wish to retrain the model:
 1. Place your training dataset as `dataset9000.csv` or modify the path in `train_model.py`.
 2. Run:
 
-```bash
+```
 python train_model.py
 ```
 
