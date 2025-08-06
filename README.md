@@ -7,15 +7,14 @@
 
 ## 📑 Table of Contents
 
-* [Overview](#overview)
-* [Features](#features)
-* [Tech Stack](#tech-stack)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Model Training](#model-training)
-* [File Structure](#file-structure)
-* [Contributors](#contributors)
-* [License](#license)
+* Overview
+* Features
+* Tech Stack
+* Installation
+* Usage
+* Model Training
+* File Structure
+* Contributors
 
 ---
 
@@ -119,15 +118,7 @@ ccp2/
 
 ## 👥 Contributors
 
-* Harshana RK
-  (Other contributors can be added here if applicable)
+* Harshana R K
+  Vishal LSK
 
 ---
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
-
-Would you like me to generate this `README.md` file for direct download?
