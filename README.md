@@ -119,6 +119,6 @@ ccp2/
 ## 👥 Contributors
 
 * Harshana R K
-  Vishal LSK
+* Vishal LSK
 
 ---
