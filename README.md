@@ -20,7 +20,7 @@
 
 ## 🔍 Overview
 
-CCP2 is a machine learning project that assists users in identifying suitable career paths based on various input features. The backend is built in Python and uses trained ML models to give predictions.
+AI-Career Guidance System is a machine learning project that assists users in identifying suitable career paths based on various input features. The backend is built in Python and uses trained ML models to give predictions.
 
 ---
 
@@ -47,7 +47,7 @@ CCP2 is a machine learning project that assists users in identifying suitable ca
 
 1. **Clone the repository**
 
-   ```bash
+   ```
    git clone https://github.com/HarshanaRK/AI_Career_Guidance_System_ccp.git
    cd AI_Career_Guidance_System_ccp
    ```
