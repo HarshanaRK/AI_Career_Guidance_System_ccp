@@ -95,7 +95,7 @@ This will generate updated versions of `careerlast.pkl` and `label_encoder.pkl`.
 ## 📂 File Structure
 
 ```
-AI_Career_Guidance_System
+AI_Career_Guidance_System_ccp
 │
 ├── app.py                 # Main application file
 ├── model.py               # ML model logic
